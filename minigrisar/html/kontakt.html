@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt/Om</title>
+    <link rel="stylesheet" href="../css/minigrisar.css">
+    <link rel="stylesheet" href="../css/uppgift.css">
+</head>
+
+<body>
+
+<!--SKIP TO MAIN-LINK-->
+<a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+<!--MENY-->
+    <nav id="navigation">
+        <ul>
+            <li>Meny</li>
+            <li><a href="../html/index.html" title="länk till startsida">Startsida</a></li>
+            <li><a href="../html/vildsvin.html" title="länk till vildsvin">Vildsvin</a></li>
+            <li><a class="active" href="../html/kontakt.html" title="länk till kontakt/info">Kontakt/Om</a></li>        </ul>
+    </nav>
+<!--HEADER-->
+<header>
+    <h1>Kontakt/Om</h1>
+</header>
+
+<!--MAIN LAYOUT-->
+<main id="main">
+    <div class="flex-container">
+        <div class="left">
+            <article>
+                <h2>Kontaktformulär</h2>
+                    <p class="text">
+                    Vill du lära dig mer om grisar eller dela med dig av fakta och information om grissläktet? Fyll i i kontaktformuläret här nedanför så skickar jag ett mail med mer information!
+                    </p>
+
+            <table>
+                <caption>Fyll i din information här</caption>
+                <tr>
+                    <th colspan="2">Alla rutor måste fyllas i</th>
+                </tr>
+                <tr>
+                    <td><label for="firstname">Förnamn</label></td>
+                    <td><label for="lastname">Efternamn</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="firstname" placeholder="Förnamn"></td>
+                    <td><input type="text" id="lastname" placeholder="Efternamn"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Telefonnummer</label></td>
+                    <td><label for="email">Email</label></td>
+                </tr>
+                <tr>
+                    <td><input type="tel" id="phone" name="phone"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="070-123-4567"></td>
+                    <td><input type="email" name="email" id="email" placeholder="email@email.se/com"></td>
+                </tr>
+            </table> 
+
+<div class="infoaboutcustomer">
+    <!--FÖRSTA KOLUMNEN-->
+    <div>
+        <ul>
+            <li>Favoritgris?</li>
+            <li><input type="radio" name="favorit" id="mini" value="minigrisar">
+            <label>Minigris</label></li>
+            <li><input type="radio" name="favorit" id="vild" value="vildsvin">
+            <label>Vildsvin</label></li>
+            <li><input type="radio" name="favorit" id="annan" value="annan">
+            <label>Annan</label></li>
+            <li><input type="radio" name="favorit" id="howto" value="howtopick">
+            <label>Hur kan man välja?</label></li>
+        </ul>
+    </div>
+
+    <!--ANDRA KOLUMNEN-->
+    <div>
+        <ul>
+            <li>Vad för gris äger du?</li>
+            <li><input type="checkbox" name="own" value="minigris">
+            <label>Minigris</label></li>
+            <li><input type="checkbox" name="own" value="vildsvin">
+            <label>Vildsvin</label></li>
+            <li><input type="checkbox" name="own" value="annan">
+            <label for="annan">Annan</label></li>
+            <li><input type="checkbox" name="own" value="none">
+            <label>Ingen... än</label></li>
+        </ul>
+    </div> 
+
+    <!--TREDJE KOLUMNEN-->
+    <div>
+        <ul>
+            <li><label for="favcolor">Favoritfärg:</label></li>
+            <li><input type="color" id="favcolor" name="favcolor"></li>
+            <li><label for="birthday">Födelsedag:</label>
+            <input type="date" id="birthday" name="birthday"></li>
+        </ul>
+    </div>
+</div>
+
+<!--TEXTBOX OM DE VILL FYLLA I NÅT MER-->
+    <textarea placeholder="Nåt mer ni har på hjärtat? Skriv här då..."></textarea>
+
+<!--SUBMIT-->
+    <input type="submit" value="Skicka">
+
+<!--LAYOUT FÖR TRE BILDER-->
+    <div class="row">
+        <div class="column">
+            <a href="https://pixabay.com/images/id-71677/" target="_blank">
+                <img src="../bilder/naturvildsvin.jpg" alt="bild på vildsvin i skogen">
+            </a>
+        </div>
+
+        <div class="column">
+            <a href="https://pixabay.com/images/id-1409288/" target="_blank">
+                <img src="../bilder/griseknoa.jpg" alt="en liten söt griseknoa">
+            </a>
+        </div>
+
+        <div class="column">
+            <a href="https://pixabay.com/images/id-2324117/" target="_blank">
+                <img src="../bilder/sandigtryne.jpg" alt="bild på sandig tryne">
+            </a>
+        </div>
+    </div>
+</article>
+</div>
+<!--HÖGRA INFORMATIONSBOX-->
+<div class="right">
+    <article>
+        <h2>Lite om mig</h2>
+<p id="ommig">
+Jag är mamma, jag heter mamma.
+Jag är från Nacka, 40+, känner mig tuff,
+för jag är mamma
+
+Jag är mamma till Molly och Melvin.
+Det är blått och rosa, fotboll och dans.
+Melvin är gluten och Molly laktos.
+Mina hjärtan som små, gulliga som få.
+Jag är mamma, ute och handlar till Molly och Melvin, 
+för jag är mamma.
+
+Var är pappa?
+
+Han tränar killarna i fotboll, han är ordförande. 
+Han är pappa, och jag är mamma
+
+Jag är mamma, jobbar som mamma.
+Är mamma, för jag är mamma.
+
+Jag är mamma, mamma
+Jag är mamma, mamma
+
+Molly gillar Dolly Style, och Melvin Fortnite
+Pappa gillar snus, och mamma är mamma
+
+För jag är mamma
+Ja, jag är mam-mam-mam-mam-maaa-!
+</p>
+<aside>Text av och från
+    <address>Emil Henhros</address>låt
+        <cite><a href="https://open.spotify.com/track/6lAJGTNK2w1yAeLLW3xXAu">Jag är mamma</a></cite>
+</aside>
+
+    <a href="https://pixabay.com/images/id-1299084/" target="_blank">
+        <img id="leftimage" src="../bilder/familj.png" alt="tecknad bild på en familj">
+    </a>
+
+        </article>
+    </div>
+</div>
+</main>
+
+<!--FOOTER-->
+<footer>
+    <div id="footerlinks">
+        <a href="#top">Toppen</a>
+        <a href="#main">Kontaktformuläret</a>
+        <a href="../html/minigrisar.html">Startsida</a>
+        <a href="../html/vildsvin.html">Vildsvin</a>
+        <a href="https://www.flaticon.com/free-icons/pig" title="pig icons">Grisicon attribute</a>
+
+    </div>
+    <p>
+    Hemsida av
+    </p>
+    <address>Bettan Bettandottir</address>
+    <a href="mailto:bettan@ilovepigs.com">bettan@ilovepigs.com</a>
+</footer>
+
+</body>
+</html>

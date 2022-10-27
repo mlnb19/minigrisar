@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+/*BODY. GRUND*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+/*Jag ändrade att få en flex-direction/column layout för att få de element att ligga där jag vill att de ska ligga, i det här stadiet av kodning känns det som det smidigaste och lättaste sättet för mig*/
+}
+
+/*LAYOUT FÖR SKIP-TO-MAIN-LÄNK*/
+.skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    opacity: 0;
+}
+.skip-to-main-content-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+/*HEADER LAYOUT*/
+header {
+    height: 200px; /*få den höjd jag vill ha*/
+    background-color: lightseagreen;
+    border-bottom: 1px dashed; /*border i botten för att göra ett litet avbryt mot övrig layout*/
+    margin-bottom: 50px; /*för att skapa mellanrum mellan header och main*/
+}
+header h1 {
+    text-align: center; /*centrera rubriken*/
+    font-family: 'Copperplate'; /*snygg font som jag ville ha*/
+    color: white; /*snyggare än den röda på orginalet*/
+    letter-spacing: 20px; /*seperera bokstäverna för att fylla ut headern*/
+    text-transform: uppercase; /*istället för att skriva med stora bokstäver i html-filen*/
+}
+
+/*<NAV> LAYOUT
+    Ändrade på orginalnavigationen så att den sträcker sig över hela sidan, vertikalt, samt har en bakgrund så att den avskiljer sig från övrig layout. Dessutom ändrat på länkfärgen, lagt till hover-färg, background på den aktiva sidan*/
+#navigation {
+    margin-top: 17%;
+    position: absolute;
+    padding: 0;
+    display: block;
+    width: 150px; /*ökade bredden för att få mer plats och fylla ut sidan*/
+    border-right: 1px solid; /*en border för att avskilja från main*/
+}
+#navigation li {
+    padding: 20px; /*skapa rum mellan länkarna*/
+    text-transform: uppercase; /*för att få stora bokstäver*/
+}
+#navigation li a {
+    color: black; /*la till font-färg till svart pga snyggare*/
+    font-family: 'courier new'; /*la till font-family för att skilja från övrig layout*/
+}
+#navigation a.active {
+    background-color: lightseagreen;
+    color: white;
+}
+#navigation a:hover {
+    background-color: black;
+    color: white;
+}
+
+/*<MAIN> LAYOUT
+    Skapade en egen contentlayout med hjälp av två flex-container för att få den layouten jag ville ha, plus att jag ville testa att skapa boxar som ligger bredvid varandra och förhåller sig till varandra*/
+#main {
+    border-radius: 30px;
+    margin-left: 180px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    background-color: pink;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+main .flex-container {
+    display: flex;
+    flex-direction: row;
+}
+main .flex-container>div {
+    border-radius: 30px;
+    background-color: #f1f1f16e;
+    width: 50%;
+    margin: 10px;
+}
+main article {
+    padding: 20px; /*skapa luft mellan element och artikelkant*/
+}
+#content {
+    display: block;
+    margin-left: 10%;
+    /*inte använt content i min layout men ville ändå ändra den så den inte skulle blandas in med navigation genom att flytta den lite mer åt höger samt få samma block-system som i min layout*/
+}
+/*<FOOTER> LAYOUT*/
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: lightseagreen; /*samma bakgrund som header för att skapa en gemenskaphet*/
+    color: white; /*samma som ovan*/
+    border-top: 1px dashed black; /*border för att avskilja lite från övrig layout*/
+}
+footer a {
+    color: white; /*ändrat länkfärg från övrig layout då jag tycker att den passar bättre*/
+}
+#footerlinks {
+    padding: 10px;
+}
+#footerlinks a {
+    margin-left: 1%;
+    border-right: 1px solid;
+    padding-right: 15px;
+}
+#footerlinks a:last-child {
+    border-right: 0;
+}
+
+/*<IMAGE> LAYOUT*/
+main .image img {
+    width: 300px;
+}
+main .image {
+    width: 300px; /*skrivit över för att minska storlek på bild så att den passar layouten bättre*/
+}
+main #leftimage {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+/*id-class på dessa bilder för att kunna stylea dem annorlunda*/
+}
+
+/*LAYOUT TILL DE TRE BILDER PÅ KONTAKTSIDAN*/
+main article .column {
+    margin-top: 60px;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+main article .column img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px dotted #ff99aa;
+}
+main article .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*<H1-6> LAYOUT*/
+main h2 {
+    text-transform: uppercase; /*så rubrikerna är skrivna i stora bokstäver*/
+    padding-bottom: 5px; /*skapa mellanrum mellan rubrik och text*/
+    text-align: center; /*istället för margin-left*/
+}
+main h2::before {
+    content: url(../bilder/pigicon.png);
+    margin-right: 10px;
+    /*lägga till icon före rubriken*/
+}
+main h2::after {
+    content: url(../bilder/pigicon.png);
+    margin-left: 10px;
+    /*lägga till icon efter rubriken*/
+}
+article h3 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    /*ha som underrubriker i huvudinnehållet*/
+}
+
+/*<P>ARAGRAF LAYOUT*/
+main article .text {
+    padding-top: 5px; /*lagt till för att skapa mellanrum*/
+}
+main article .text::first-letter {
+    font-size: 1.5em; /*få den första bokstaven i varje paragraf större*/
+    color: #FD0028; /*få den första bokstaven i varje paragraf i en annan färg*/
+}
+main article .source {
+    margin-top: 50px; /*lagt till för att få texten längst ner på sidan*/
+}
+main article #ommig {
+    padding-left: 45px;
+    font-size: 1em;
+    margin-bottom: 30px;
+    white-space: pre; /*lagt till för att få samma effekt som pre-element utan att behöva använda den taggen i html-filen*/
+}
+
+/*LÄNKAR I LAYOUTEN*/
+a {
+    color: #FD0028; /*lagt till så att länkar i layouten har denna fina färg*/
+}
+
+/*TABLE SOM FINNS PÅ KONTAKT/OM-SIDAN*/
+main article table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+main article caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+/*MER INFO OM ANVÄNDARE UNDER TABLE*/
+main article .infoaboutcustomer {
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    border-left: 1px dashed;
+    margin-bottom: 20px;
+}
+main article .infoaboutcustomer > div {
+    border-right: 1px dashed;
+    padding-left: 15px;
+}
+main article textarea {
+    width: 400px;
+    height: 100px;
+    resize: none;
+    display: block;
+}
+
+/*ASIDE*/
+aside {
+    float: right;
+    margin-top: -95px;
+    margin-right: 10px;
+    background-color: rgba(128, 128, 128, 0.397);
+    padding: 5px;
+}
